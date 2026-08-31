@@ -505,6 +505,21 @@ section + section { border-top: 1px solid var(--line); }
   text-align: right;
 }
 
+/* ---------- B2B (BlueX Security) ---------- */
+.b2b-warning {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--blue-bright);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 720px;
+}
+
+.b2b-warning strong { color: var(--ice); }
+
 /* ---------- Contact / footer ---------- */
 .contact .wrap {
   display: flex;
