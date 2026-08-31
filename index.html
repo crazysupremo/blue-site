@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BLUE — a gente cria plataformas gamer</title>
+<meta name="description" content="A Blue constrói produtos gamer com segurança de verdade embutida desde o início. Conheça o NEXT GAME e o Bounce Race." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 3h10.5c3.6 0 6 2 6 5.2 0 2-1 3.4-2.6 4.1 2 .7 3.3 2.3 3.3 4.6 0 3.4-2.6 5.6-6.4 5.6H4V3Zm4 3.6v5.4h5.8c2 0 3.2-1 3.2-2.7 0-1.7-1.2-2.7-3.2-2.7H8Zm0 8.9v5.9h6.3c2.2 0 3.5-1.1 3.5-3 0-1.8-1.3-2.9-3.5-2.9H8Z" fill="currentColor"/>
+      </svg>
+      BLUE
+    </a>
+    <ul class="nav-links">
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="nav-cta" href="https://gamerwork-platform.onrender.com/" target="_blank" rel="noopener">Entrar no NEXT GAME</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow-line"><span class="dot"></span> dois produtos no ar agora</p>
+      <h1>A gente constrói<br />o que vem depois.</h1>
+      <p class="lede">A Blue faz plataformas e jogos pra comunidade gamer — com moderação, verificação de idade e proteção de menores pensadas desde a primeira linha de código, não coladas depois.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#produtos">Ver produtos</a>
+        <a class="btn btn-ghost" href="#sobre">Sobre a Blue</a>
+      </div>
+    </div>
+    <div>
+      <div class="signal-grid">
+        <canvas id="signalCanvas" width="420" height="420" role="img" aria-label="Visualização animada representando atividade em tempo real na rede da Blue"></canvas>
+      </div>
+      <p class="signal-caption">atividade em tempo real · chat, voz e partidas</p>
+    </div>
+  </div>
+</header>
+
+<section id="produtos">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>O que já está no ar</h2>
+      <p>Dois produtos, dois jeitos diferentes de jogar. Ambos rodam hoje — sem espera de fila, sem cadastro pago.</p>
+    </div>
+
+    <div class="products">
+
+      <article class="product-card">
+        <p class="product-status">● no ar</p>
+        <h3>NEXT GAME</h3>
+        <p>Rede social pra comunidades gamer: chat, voz, servidores, torneios e ranking — com verificação de idade e moderação automática de conteúdo de risco embutidas.</p>
+        <div class="product-visual">
+          <div class="ticker" aria-hidden="true">
+            <span><b>Torneio</b> de Valorant abriu inscrições</span>
+            <span>Nova sala de voz criada em <b>#competitivo</b></span>
+            <span>Ranking semanal atualizado</span>
+            <span><b>Proteção BLUEX</b> ativa nesta sessão</span>
+          </div>
+        </div>
+        <div class="product-links">
+          <a class="chip-link primary" href="https://gamerwork-platform.onrender.com/" target="_blank" rel="noopener">Entrar no NEXT GAME</a>
+          <a class="chip-link" href="#seguranca">Como protegemos contas</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-status">● no ar</p>
+        <h3>Bounce Race</h3>
+        <p>Pule, desvie e vá o mais longe que puder. Um toque, um pulo — a velocidade sobe junto com sua pontuação. Modo clássico, competitivo contra bots e desafios diários.</p>
+        <div class="product-visual">
+          <div class="bounce-stage" aria-hidden="true">
+            <div class="bounce-floor"></div>
+            <div class="bounce-tower"></div>
+            <div class="bounce-tower"></div>
+            <div class="bounce-ball"></div>
+          </div>
+        </div>
+        <div class="product-links">
+          <a class="chip-link primary" href="https://bounce-race.onrender.com/" target="_blank" rel="noopener">Jogar agora</a>
+        </div>
+      </article>
+
+    </div>
+
+    <article class="product-card soon" style="margin-top: 22px;">
+      <p class="product-status" style="color: var(--muted-dim);">● em desenvolvimento</p>
+      <h3 style="font-size: 1.15rem; color: var(--ice);">O próximo produto da Blue</h3>
+      <p style="margin: 0;">Ainda não anunciado. Se você quer saber primeiro, o canal de contato aqui embaixo chega direto na equipe.</p>
+    </article>
+  </div>
+</section>
+
+<section id="seguranca">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Segurança não é um adicional</h2>
+      <p>O NEXT GAME já roda com moderação ativa, seguindo as diretrizes do ECA Digital (Lei 15.211/25) para plataformas acessíveis por crianças e adolescentes no Brasil.</p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-item">
+        <h4>Verificação no cadastro</h4>
+        <p>Toda conta nova informa data de nascimento, o que permite priorizar moderação de contas de menores de idade.</p>
+      </div>
+      <div class="trust-item">
+        <h4>Moderação automática</h4>
+        <p>Compartilhamento de tela e chamadas de voz passam por checagem automática de conteúdo de risco — a imagem em si nunca é guardada.</p>
+      </div>
+      <div class="trust-item">
+        <h4>Denúncia em toda mensagem</h4>
+        <p>Qualquer conteúdo pode ser reportado direto pra moderação, incluindo canal independente via SaferNet Brasil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="about">
+  <div class="wrap">
+    <div class="about-copy">
+      <h2 style="font-family: var(--font-display); font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin: 0 0 20px; font-weight: 600;">Sobre a Blue</h2>
+      <p>A Blue Sports Games é a empresa por trás do NEXT GAME e do Bounce Race. A gente parte de um problema real: comunidades gamer atraem muita gente jovem, e a maioria das plataformas trata segurança como uma tela de configurações a mais.</p>
+      <p>Preferimos o caminho mais difícil — construir verificação, moderação e denúncia como parte do produto desde o início, não como resposta a um escândalo depois.</p>
+    </div>
+    <div class="about-facts">
+      <div class="about-fact"><span>Produtos no ar</span><span>NEXT GAME · Bounce Race</span></div>
+      <div class="about-fact"><span>Conformidade</span><span>ECA Digital · Lei 15.211/25</span></div>
+      <div class="about-fact"><span>Moderação</span><span>Automática + denúncia manual</span></div>
+      <div class="about-fact"><span>Denúncia externa</span><span>SaferNet Brasil</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Quer falar com a gente?</h2>
+      <p>Dúvida sobre um produto, parceria ou proposta — a mensagem cai direto no painel da equipe.</p>
+    </div>
+    <a class="btn btn-primary" href="mailto:contato@blue.games">contato@blue.games</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Blue Sports Games. Todos os direitos reservados.</span>
+    <div class="foot-links">
+      <a href="https://gamerwork-platform.onrender.com/" target="_blank" rel="noopener">NEXT GAME</a>
+      <a href="https://bounce-race.onrender.com/" target="_blank" rel="noopener">Bounce Race</a>
+      <a href="#seguranca">Segurança</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
