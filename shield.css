@@ -58,3 +58,50 @@ html { scroll-padding-top: 84px; }
 .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--blue-bright); }
 .plan .btn { justify-content: center; }
 .plans-note { color: var(--muted); font-size: .92rem; margin-top: 22px; }
+
+
+/* ======================= Acabamento visual ======================= */
+/* marca no topo */
+.brand { gap: 12px; }
+.brand-drop { width: 34px; height: 34px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(80,150,255,.55)); transition: transform .25s ease; }
+.brand:hover .brand-drop { transform: translateY(-2px) scale(1.06); }
+.brand-text { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: .06em; background: linear-gradient(90deg, #fff, #a8d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nav { box-shadow: 0 1px 0 rgba(107,162,255,.08), 0 10px 30px -18px rgba(47,111,237,.45); }
+.nav-links a { position: relative; }
+.nav-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: var(--blue-bright); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; border-radius: 2px; }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* início */
+.hero { background:
+  radial-gradient(700px 420px at 85% 10%, rgba(47,111,237,.22), transparent 70%),
+  radial-gradient(600px 380px at 5% 95%, rgba(34,170,255,.12), transparent 70%),
+  var(--void); }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .35;
+  background-image: linear-gradient(rgba(107,162,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(107,162,255,.07) 1px, transparent 1px);
+  background-size: 52px 52px; -webkit-mask-image: radial-gradient(ellipse at 60% 40%, #000 20%, transparent 72%); mask-image: radial-gradient(ellipse at 60% 40%, #000 20%, transparent 72%); }
+.hero .wrap { position: relative; }
+.hero-logo { width: min(340px, 78%); height: auto; margin: 0 0 26px; filter: drop-shadow(0 8px 30px rgba(47,111,237,.35)); }
+.hero h1 .grad { background: linear-gradient(90deg, #6ba2ff, #9fe0ff 60%, #fff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btn-primary { box-shadow: 0 8px 24px -10px rgba(47,111,237,.9); }
+.btn { transition: transform .15s ease, border-color .15s ease, background .15s ease, box-shadow .15s ease; }
+.btn:hover { transform: translateY(-2px); }
+.signal-grid { filter: drop-shadow(0 0 40px rgba(47,111,237,.25)); }
+
+/* cartões */
+.product-card, .trust-item, .layer, .plan, .steps li, .level { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.product-card:hover, .plan:hover, .steps li:hover, .level:hover, .layer:hover { transform: translateY(-4px); border-color: rgba(107,162,255,.45); box-shadow: 0 18px 40px -22px rgba(47,111,237,.55); }
+.trust-item:hover { background: var(--panel-2); }
+.product-card.soon:hover { transform: none; box-shadow: none; }
+.section-head h2, .bluex-head h2 { background: linear-gradient(90deg, #fff, #b9d8ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.product-status { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(47,111,237,.12); border: 1px solid rgba(107,162,255,.25); }
+
+/* rodapé */
+.foot-brand { display: inline-flex; align-items: center; gap: 10px; }
+.foot-brand img { width: 22px; height: 22px; object-fit: contain; opacity: .9; }
+
+/* aparecer ao rolar */
+.reveal-on .rv { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+.reveal-on .rv.in { opacity: 1; transform: none; }
+.reveal-on .product-card.rv.in:hover, .reveal-on .plan.rv.in:hover { transform: translateY(-4px); }
+
+@media (max-width: 900px) { .hero-logo { width: min(280px, 80%); } }

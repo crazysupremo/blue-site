@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>BLUE — a gente cria plataformas gamer</title>
 <meta name="description" content="A Blue constrói produtos gamer com segurança de verdade embutida desde o início. Conheça o NEXT GAME, o Bounce Race e o BLUEX Shield, a proteção contra excesso de requisições para o seu jogo." />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#06101f" />
+<meta property="og:title" content="BLUE Sports Games" />
+<meta property="og:description" content="Plataformas gamer com segurança de verdade desde o início: NEXT GAME, Bounce Race e BLUEX Shield." />
+<meta property="og:image" content="og-image.png" />
+<meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -15,11 +22,9 @@
 
 <nav class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">
-      <svg class="brand-mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M4 3h10.5c3.6 0 6 2 6 5.2 0 2-1 3.4-2.6 4.1 2 .7 3.3 2.3 3.3 4.6 0 3.4-2.6 5.6-6.4 5.6H4V3Zm4 3.6v5.4h5.8c2 0 3.2-1 3.2-2.7 0-1.7-1.2-2.7-3.2-2.7H8Zm0 8.9v5.9h6.3c2.2 0 3.5-1.1 3.5-3 0-1.8-1.3-2.9-3.5-2.9H8Z" fill="currentColor"/>
-      </svg>
-      BLUE
+    <a class="brand" href="#top" aria-label="BLUE Sports Games — início">
+      <img class="brand-drop" src="gota.png" alt="" width="34" height="34" />
+      <span class="brand-text">BLUE</span>
     </a>
     <ul class="nav-links">
       <li><a href="#produtos">Produtos</a></li>
@@ -37,8 +42,9 @@
 <header class="hero" id="top">
   <div class="wrap">
     <div>
+      <img class="hero-logo" src="logo-blue.png" alt="BLUE Sports Games" width="1400" height="462" />
       <p class="eyebrow-line"><span class="dot"></span> dois produtos no ar agora</p>
-      <h1>A gente constrói<br />o que vem depois.</h1>
+      <h1>A gente constrói<br /><span class="grad">o que vem depois.</span></h1>
       <p class="lede">A Blue faz plataformas e jogos pra comunidade gamer — com moderação, verificação de idade e proteção de menores pensadas desde a primeira linha de código, não coladas depois.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#produtos">Ver produtos</a>
@@ -311,7 +317,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Blue Sports Games. Todos os direitos reservados.</span>
+    <span class="foot-brand"><img src="gota.png" alt="" width="22" height="22" /> © 2026 Blue Sports Games. Todos os direitos reservados.</span>
     <div class="foot-links">
       <a href="https://gamerwork-platform.onrender.com/" target="_blank" rel="noopener">NEXT GAME</a>
       <a href="https://bounce-race.onrender.com/" target="_blank" rel="noopener">Bounce Race</a>
@@ -323,5 +329,16 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+// aparece suavemente ao rolar a página (se o navegador não suportar, tudo já fica visível)
+(function () {
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.documentElement.classList.add("reveal-on");
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".product-card, .trust-item, .layer, .steps li, .level, .plan, .about-fact, .section-head, .bluex-head").forEach(function (el) { el.classList.add("rv"); io.observe(el); });
+})();
+</script>
 </body>
 </html>
