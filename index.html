@@ -17,6 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="shield.css" />
+<link rel="stylesheet" href="stillwater.css" />
 </head>
 <body>
 
@@ -28,10 +29,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#stillwater">Stillwater</a></li>
       <li><a href="#seguranca">BlueX</a></li>
       <li><a href="#bluex-shield">Shield</a></li>
       <li><a href="#precos">Planos</a></li>
-      <li><a href="#bluex-security">Para empresas</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
@@ -106,14 +107,60 @@
 
     </div>
 
-    <article class="product-card soon" style="margin-top: 22px;">
-      <p class="product-status" style="color: var(--muted-dim);">● em desenvolvimento</p>
-      <h3 style="font-size: 1.15rem; color: var(--ice);">O próximo produto da Blue</h3>
-      <p style="margin: 0;">Ainda não anunciado. O lançamento está previsto até 2027. Se você quer saber primeiro, o canal de contato aqui embaixo chega direto na equipe.</p>
-    </article>
   </div>
 </section>
 
+<section id="stillwater" class="sw" aria-label="Stillwater, o próximo jogo da Blue">
+  <div class="sw-stage">
+    <div class="sw-orb" aria-hidden="true"></div>
+    <canvas class="sw-sky-canvas" aria-hidden="true"></canvas>
+    <svg class="sw-trees sw-trees-far" aria-hidden="true" preserveAspectRatio="none"></svg>
+    <svg class="sw-trees sw-trees-near" aria-hidden="true" preserveAspectRatio="none"></svg>
+    <div class="sw-eyes" aria-hidden="true"><i></i><i></i></div>
+    <div class="sw-river" aria-hidden="true"><div class="sw-shimmer"></div></div>
+
+    <svg class="sw-boat" viewBox="0 0 220 150" aria-hidden="true">
+      <g class="sw-boat-body">
+        <line x1="58" y1="64" x2="6" y2="12" stroke="currentColor" stroke-width="2" opacity=".75"/>
+        <line x1="166" y1="64" x2="214" y2="12" stroke="currentColor" stroke-width="2" opacity=".75"/>
+        <line x1="110" y1="10" x2="110" y2="52" stroke="currentColor" stroke-width="3"/>
+        <circle class="sw-mast-light" cx="110" cy="8" r="4.5"/>
+        <path d="M70 52h80v34H70z" fill="currentColor"/>
+        <path d="M60 86h100l-10 8h-80z" fill="currentColor"/>
+        <path d="M18 92h184l-22 40H42z" fill="currentColor"/>
+        <rect class="sw-win" x="82" y="60" width="16" height="12" rx="2"/>
+        <rect class="sw-win" x="122" y="60" width="16" height="12" rx="2"/>
+      </g>
+    </svg>
+
+    <div class="sw-copy">
+      <p class="sw-kicker" data-in="0" data-out=".17">Blue Sports Games apresenta</p>
+      <h2 class="sw-line" data-in=".02" data-out=".18">Sobreviva<br />na Amazônia.</h2>
+      <h2 class="sw-line" data-in=".20" data-out=".36">Um barco.<br />Um rio sem fim.</h2>
+      <h2 class="sw-line" data-in=".38" data-out=".52">Pesque<br />para sobreviver.</h2>
+      <h2 class="sw-line" data-in=".54" data-out=".65">…e de perigo.</h2>
+      <h2 class="sw-line" data-in=".67" data-out=".84">Do amanhecer<br />até a noite.</h2>
+
+      <div class="sw-reveal" data-in=".87">
+        <p class="sw-by"><img src="gota.png" alt="" width="22" height="22" /> BLUE <span>SPORTS GAMES</span></p>
+        <h2 class="sw-title">STILLWATER</h2>
+        <p class="sw-sub">Sobreviva na Amazônia com seu barco 86.</p>
+        <p class="sw-date">● em desenvolvimento · lançamento previsto até 2027</p>
+        <a class="btn btn-primary" href="#contato">Quero saber primeiro</a>
+        <a class="btn" href="#sw-teaser">Ver teaser</a>
+      </div>
+    </div>
+
+    <p class="sw-hint" aria-hidden="true">role para descobrir<span></span></p>
+  </div>
+</section>
+
+<section id="sw-teaser" class="sw-teaser">
+  <div class="wrap" style="text-align:center">
+    <p class="sw-kicker" style="opacity:1;position:static">Teaser oficial</p>
+    <video controls preload="none" playsinline poster="stillwater-poster.jpg" src="stillwater-teaser.mp4"></video>
+  </div>
+</section>
 <section id="seguranca">
   <div class="wrap">
     <div class="bluex-head">
@@ -269,41 +316,12 @@
       <div class="about-fact"><span>Conformidade</span><span>ECA Digital · Lei 15.211/25</span></div>
       <div class="about-fact"><span>Moderação</span><span>Automática + denúncia manual</span></div>
       <div class="about-fact"><span>Proteção de servidor</span><span>BLUEX Shield</span></div>
+      <div class="about-fact"><span>Em desenvolvimento</span><span>Stillwater · até 2027</span></div>
       <div class="about-fact"><span>Denúncia externa</span><span>SaferNet Brasil</span></div>
     </div>
   </div>
 </section>
 
-<section id="bluex-security" class="b2b">
-  <div class="wrap">
-    <div class="bluex-head">
-      <p class="product-status" style="color: var(--muted-dim);">● para empresas · produto separado</p>
-      <h2>BlueX Security</h2>
-      <p class="bluex-lede">Um sistema à parte, pra comércio físico — nada a ver com o BlueX do NEXT GAME nem com o BLUEX Shield. A câmera de segurança da sua loja manda um frame pra API, e a análise sinaliza furto, roubo com força, arrombamento ou vandalismo em andamento. Nenhuma imagem é guardada — só o resultado, pra revisão humana.</p>
-    </div>
-
-    <div class="trust-grid">
-      <div class="trust-item">
-        <h4>Análise por API</h4>
-        <p>Cada loja integra com sua própria chave de API e manda frames da câmera pra um endpoint simples.</p>
-      </div>
-      <div class="trust-item">
-        <h4>Fila de revisão humana</h4>
-        <p>Todo caso sinalizado cai numa fila pra uma pessoa confirmar — a IA nunca decide sozinha.</p>
-      </div>
-      <div class="trust-item">
-        <h4>Sem guardar imagem</h4>
-        <p>Só o resultado da análise fica salvo (sinalizado ou não, categoria, motivo) — o frame em si não é armazenado.</p>
-      </div>
-    </div>
-
-    <div class="b2b-warning">
-      <strong>Importante:</strong> não é um sistema de segurança patrimonial certificado. A análise é probabilística — tem falso positivo e falso negativo — e nunca pode ser a única base pra abordar ou deter alguém.
-    </div>
-
-    <a class="btn btn-primary" href="#contato" style="margin-top: 24px;">Quero testar na minha loja</a>
-  </div>
-</section>
 
 <section id="contato" class="contact">
   <div class="wrap">
@@ -321,6 +339,7 @@
     <div class="foot-links">
       <a href="https://gamerwork-platform.onrender.com/" target="_blank" rel="noopener">NEXT GAME</a>
       <a href="https://bounce-race.onrender.com/" target="_blank" rel="noopener">Bounce Race</a>
+      <a href="#stillwater">Stillwater</a>
       <a href="#seguranca">BlueX</a>
       <a href="#bluex-shield">Shield</a>
       <a href="#precos">Planos</a>
@@ -329,6 +348,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="stillwater.js"></script>
 <script>
 // aparece suavemente ao rolar a página (se o navegador não suportar, tudo já fica visível)
 (function () {
