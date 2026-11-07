@@ -4,11 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>BLUE — a gente cria plataformas gamer</title>
-<meta name="description" content="A Blue constrói produtos gamer com segurança de verdade embutida desde o início. Conheça o NEXT GAME e o Bounce Race." />
+<meta name="description" content="A Blue constrói produtos gamer com segurança de verdade embutida desde o início. Conheça o NEXT GAME, o Bounce Race e o BLUEX Shield, a proteção contra excesso de requisições para o seu jogo." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="shield.css" />
 </head>
 <body>
 
@@ -23,6 +24,8 @@
     <ul class="nav-links">
       <li><a href="#produtos">Produtos</a></li>
       <li><a href="#seguranca">BlueX</a></li>
+      <li><a href="#bluex-shield">Shield</a></li>
+      <li><a href="#precos">Preços</a></li>
       <li><a href="#bluex-security">Para empresas</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
@@ -39,7 +42,7 @@
       <p class="lede">A Blue faz plataformas e jogos pra comunidade gamer — com moderação, verificação de idade e proteção de menores pensadas desde a primeira linha de código, não coladas depois.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#produtos">Ver produtos</a>
-        <a class="btn btn-ghost" href="#sobre">Sobre a Blue</a>
+        <a class="btn btn-ghost" href="#bluex-shield">Proteger meu jogo</a>
       </div>
     </div>
     <div>
@@ -127,6 +130,124 @@
         <p>Qualquer conteúdo pode ser reportado direto pra moderação, incluindo canal independente via SaferNet Brasil.</p>
       </div>
     </div>
+
+    <div class="layers">
+      <div class="layer">
+        <span class="layer-tag">camada 1 · conteúdo</span>
+        <h4>BlueX Moderação</h4>
+        <p>Cuida do que as pessoas postam e mostram: idade, texto, imagens e denúncias. É o BlueX de sempre.</p>
+      </div>
+      <div class="layer layer-new">
+        <span class="layer-tag">camada 2 · tráfego</span>
+        <h4>BLUEX Shield</h4>
+        <p>Cuida de quem manda pedidos demais ao servidor. Derruba só o IP que abusa, sem derrubar o jogo. Veja abaixo como funciona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bluex-shield" class="shield">
+  <div class="wrap">
+    <div class="bluex-head">
+      <p class="product-status">● novo · para o seu jogo ou site</p>
+      <h2>BLUEX Shield</h2>
+      <p class="bluex-lede">Quando alguém manda milhares de pedidos por minuto ao seu servidor, o jogo trava para todo mundo. O Shield fica na frente do servidor, percebe o exagero e bloqueia só o IP que está abusando. Jogador normal nem percebe que ele existe.</p>
+    </div>
+
+    <h3 class="sub-title">Como funciona, em 4 passos</h3>
+    <ol class="steps">
+      <li>
+        <span class="step-n">1</span>
+        <div><h4>Instala no seu servidor</h4><p>Um pacote pronto para Node.js ou C++ (Windows e Linux). Serve para servidor hospedado na nuvem ou no seu próprio PC. Nenhuma porta extra precisa ser aberta.</p></div>
+      </li>
+      <li>
+        <span class="step-n">2</span>
+        <div><h4>Conta os pedidos de cada IP</h4><p>No dia a dia ele não faz nada visível. Só conta quantos pedidos cada IP manda. O limite padrão é muito acima do que uma pessoa consegue fazer.</p></div>
+      </li>
+      <li>
+        <span class="step-n">3</span>
+        <div><h4>Bloqueia quem exagera</h4><p>Quem passa do limite recebe um aviso e depois um bloqueio temporário (10 minutos). Se insistir, o bloqueio aumenta. Os demais jogadores continuam jogando.</p></div>
+      </li>
+      <li>
+        <span class="step-n">4</span>
+        <div><h4>Você acompanha no painel</h4><p>O Monitor mostra os pedidos por minuto, o nível de alerta e os IPs bloqueados. Você pode derrubar ou liberar um IP com um clique.</p></div>
+      </li>
+    </ol>
+
+    <h3 class="sub-title">O que acontece em um ataque</h3>
+    <p class="sub-lede">O Shield mede o total de pedidos por minuto e sobe sozinho de nível:</p>
+    <div class="levels">
+      <div class="level lv-ok"><span class="lv-n">Normal</span><b>até 1.000 / min</b><p>Tudo liberado. Só os IPs que passam do limite individual são bloqueados.</p></div>
+      <div class="level lv-warn"><span class="lv-n">Elevado</span><b>a partir de 1.000 / min</b><p>Alerta no painel. Ele fica de olho, sem apertar nada ainda.</p></div>
+      <div class="level lv-high"><span class="lv-n">Suspeito</span><b>a partir de 5.000 / min</b><p>Provável ataque. Os limites ficam 4 vezes mais rígidos e IPs novos esperam cerca de 1 minuto. Quem já estava jogando segue normal.</p></div>
+      <div class="level lv-crit"><span class="lv-n">Extremo</span><b>a partir de 10.000 / min</b><p>Defesa máxima: limites 8 vezes mais rígidos, bloqueio imediato dos IPs abusivos e alerta no painel e no seu perfil.</p></div>
+    </div>
+
+    <div class="shield-grid">
+      <div class="trust-item"><h4>Não coleta dados de jogadores</h4><p>Só guarda números de pedidos e os IPs de quem abusa. Nada de conta, mensagem, aparelho ou conteúdo.</p></div>
+      <div class="trust-item"><h4>Funciona no PC do cliente</h4><p>Servidor em máquina própria envia só os resumos para o painel. Não precisa de site nem de IP fixo.</p></div>
+      <div class="trust-item"><h4>Painel com acesso da sua equipe</h4><p>Cada cliente tem o próprio login e vê só o próprio servidor. A Blue ajuda a acompanhar quando você pedir.</p></div>
+    </div>
+
+    <div class="b2b-warning">
+      <strong>Importante:</strong> o Shield protege contra excesso de pedidos e abuso de um ou poucos IPs, a situação mais comum. Em ataques gigantes, com milhões de pedidos por segundo vindos de muitos lugares, nenhum programa dentro do servidor aguenta sozinho. Nesses casos, recomendamos usar junto uma proteção de rede (como o Cloudflare), e a gente ajuda a configurar.
+    </div>
+  </div>
+</section>
+
+<section id="precos" class="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Quanto custa</h2>
+      <p>Valores mensais em euro (€). Sem fidelidade: você pode cancelar quando quiser.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan">
+        <h3>Inicial</h3>
+        <p class="plan-for">Para 1 jogo ou site</p>
+        <p class="price"><span class="cur">€</span>29<span class="per"> / mês</span></p>
+        <ul>
+          <li>Proteção automática por IP</li>
+          <li>Bloqueio temporário de quem abusa</li>
+          <li>Painel Monitor com 1 usuário</li>
+          <li>Guia de instalação passo a passo</li>
+          <li>Suporte por e-mail</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contato">Quero o Inicial</a>
+      </article>
+
+      <article class="plan plan-featured">
+        <p class="plan-badge">mais escolhido</p>
+        <h3>Pro</h3>
+        <p class="plan-for">Para até 3 jogos ou sites</p>
+        <p class="price"><span class="cur">€</span>79<span class="per"> / mês</span></p>
+        <ul>
+          <li>Tudo do Inicial</li>
+          <li>Níveis de defesa automáticos (1 mil, 5 mil e 10 mil por minuto)</li>
+          <li>Derrubar e liberar IP pelo painel</li>
+          <li>Alertas de ataque</li>
+          <li>Vários usuários da equipe</li>
+          <li>Instalação acompanhada pela Blue</li>
+          <li>Suporte prioritário</li>
+        </ul>
+        <a class="btn btn-primary" href="#contato">Quero o Pro</a>
+      </article>
+
+      <article class="plan">
+        <h3>Empresa</h3>
+        <p class="plan-for">Vários servidores ou jogos grandes</p>
+        <p class="price price-text">Sob consulta</p>
+        <ul>
+          <li>Tudo do Pro</li>
+          <li>Quantidade de servidores sob medida</li>
+          <li>Configuração junto com proteção de rede (Cloudflare)</li>
+          <li>Atendimento dedicado</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contato">Falar com a Blue</a>
+      </article>
+    </div>
+    <p class="plans-note">Quer testar antes? Peça uma demonstração pelo contato e a gente instala junto com você.</p>
   </div>
 </section>
 
@@ -141,6 +262,7 @@
       <div class="about-fact"><span>Produtos no ar</span><span>NEXT GAME · Bounce Race</span></div>
       <div class="about-fact"><span>Conformidade</span><span>ECA Digital · Lei 15.211/25</span></div>
       <div class="about-fact"><span>Moderação</span><span>Automática + denúncia manual</span></div>
+      <div class="about-fact"><span>Proteção de servidor</span><span>BLUEX Shield</span></div>
       <div class="about-fact"><span>Denúncia externa</span><span>SaferNet Brasil</span></div>
     </div>
   </div>
@@ -151,7 +273,7 @@
     <div class="bluex-head">
       <p class="product-status" style="color: var(--muted-dim);">● para empresas · produto separado</p>
       <h2>BlueX Security</h2>
-      <p class="bluex-lede">Um sistema à parte, pra comércio físico — nada a ver com o BlueX do NEXT GAME. A câmera de segurança da sua loja manda um frame pra API, e a análise sinaliza furto, roubo com força, arrombamento ou vandalismo em andamento. Nenhuma imagem é guardada — só o resultado, pra revisão humana.</p>
+      <p class="bluex-lede">Um sistema à parte, pra comércio físico — nada a ver com o BlueX do NEXT GAME nem com o BLUEX Shield. A câmera de segurança da sua loja manda um frame pra API, e a análise sinaliza furto, roubo com força, arrombamento ou vandalismo em andamento. Nenhuma imagem é guardada — só o resultado, pra revisão humana.</p>
     </div>
 
     <div class="trust-grid">
@@ -181,7 +303,7 @@
   <div class="wrap">
     <div>
       <h2>Quer falar com a gente?</h2>
-      <p>Dúvida sobre um produto, parceria, reclamação ou denúncia — o formulário de suporte cai direto no painel da equipe da Blue.</p>
+      <p>Dúvida sobre um produto, contratar o BLUEX Shield, parceria, reclamação ou denúncia — o formulário de suporte cai direto no painel da equipe da Blue.</p>
     </div>
     <a class="btn btn-primary" href="https://gamerwork-platform.onrender.com/" target="_blank" rel="noopener">Contatar o suporte</a>
   </div>
@@ -194,6 +316,8 @@
       <a href="https://gamerwork-platform.onrender.com/" target="_blank" rel="noopener">NEXT GAME</a>
       <a href="https://bounce-race.onrender.com/" target="_blank" rel="noopener">Bounce Race</a>
       <a href="#seguranca">BlueX</a>
+      <a href="#bluex-shield">Shield</a>
+      <a href="#precos">Preços</a>
     </div>
   </div>
 </footer>

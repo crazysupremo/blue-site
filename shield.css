@@ -1,0 +1,60 @@
+/* BLUEX Shield — seções novas (usa as variáveis do style.css) */
+
+/* menu no celular: antes os links sumiam; agora viram uma faixa rolável */
+@media (max-width: 760px) {
+  .nav .wrap { flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 10px; gap: 8px; }
+  .nav-links { display: flex !important; order: 3; width: 100%; gap: 18px; overflow-x: auto; white-space: nowrap; padding: 4px 0 2px; -webkit-overflow-scrolling: touch; }
+  .nav-links a { font-size: 0.88rem; }
+}
+html { scroll-padding-top: 84px; }
+@media (max-width: 760px) { html { scroll-padding-top: 120px; } }
+
+/* duas camadas do BlueX */
+.layers { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 22px; }
+@media (max-width: 760px) { .layers { grid-template-columns: 1fr; } }
+.layer { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; }
+.layer-new { border-color: var(--blue); box-shadow: 0 0 0 1px rgba(47,111,237,.25) inset; }
+.layer-tag { font-family: var(--font-mono); font-size: .7rem; color: var(--blue-bright); }
+.layer h4 { font-family: var(--font-display); font-size: 1.1rem; margin: 8px 0 6px; font-weight: 600; }
+.layer p { color: var(--muted); font-size: .92rem; margin: 0; }
+
+/* Shield */
+.sub-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; margin: 40px 0 16px; }
+.sub-lede { color: var(--muted); margin: -6px 0 18px; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+.steps li { display: flex; gap: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.step-n { flex: 0 0 34px; height: 34px; border-radius: 50%; background: var(--blue); color: #fff; font-family: var(--font-display); font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.steps h4 { font-family: var(--font-display); font-size: 1.02rem; margin: 2px 0 6px; font-weight: 600; }
+.steps p { color: var(--muted); font-size: .92rem; margin: 0; }
+
+.levels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media (max-width: 960px) { .levels { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .levels { grid-template-columns: 1fr; } }
+.level { background: var(--panel); border: 1px solid var(--line); border-top-width: 3px; border-radius: 12px; padding: 18px; }
+.level .lv-n { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.level b { display: block; font-family: var(--font-display); font-size: 1.05rem; margin: 6px 0 8px; }
+.level p { color: var(--muted); font-size: .88rem; margin: 0; }
+.lv-ok { border-top-color: #22c55e; } .lv-warn { border-top-color: #facc15; } .lv-high { border-top-color: #fb923c; } .lv-crit { border-top-color: #ef4444; }
+
+.shield-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 34px; }
+@media (max-width: 760px) { .shield-grid { grid-template-columns: 1fr; } }
+.shield .b2b-warning { margin-top: 26px; }
+
+/* Preços */
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+@media (max-width: 960px) { .plans { grid-template-columns: 1fr; max-width: 460px; } }
+.plan { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; }
+.plan-featured { border-color: var(--blue); box-shadow: 0 0 0 1px rgba(47,111,237,.35) inset, 0 18px 50px -24px rgba(47,111,237,.6); }
+.plan-badge { position: absolute; top: -12px; left: 24px; margin: 0; background: var(--blue); color: #fff; font-family: var(--font-mono); font-size: .7rem; padding: 4px 10px; border-radius: 999px; }
+.plan h3 { font-family: var(--font-display); font-size: 1.4rem; margin: 0 0 4px; }
+.plan-for { color: var(--muted); font-size: .9rem; margin: 0 0 16px; }
+.price { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; line-height: 1; margin: 0 0 20px; }
+.price .cur { font-size: 1.5rem; vertical-align: top; margin-right: 3px; color: var(--blue-bright); }
+.price .per { font-size: .95rem; font-weight: 500; color: var(--muted); font-family: var(--font-body); }
+.price-text { font-size: 1.9rem; padding: 10px 0 6px; }
+.plan ul { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
+.plan li { color: var(--muted); font-size: .92rem; padding: 7px 0 7px 22px; border-top: 1px solid var(--line); position: relative; }
+.plan li::before { content: "✓"; position: absolute; left: 0; color: var(--blue-bright); }
+.plan .btn { justify-content: center; }
+.plans-note { color: var(--muted); font-size: .92rem; margin-top: 22px; }
