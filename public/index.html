@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROTECTION BLUEX — Painel Admin</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div id="login-screen">
+    <div class="login-card">
+      <h1>🔷 PROTECTION BLUEX</h1>
+      <p class="brand-sub">BLUE SPORTS GAMES</p>
+      <p>Painel administrativo — verificação de idade, moderação e análise de texto.</p>
+      <input type="password" id="login-password" placeholder="Senha de admin" autocomplete="current-password" />
+      <button id="btn-login">Entrar</button>
+      <div class="login-error" id="login-error"></div>
+    </div>
+  </div>
+
+  <div id="app-screen" class="hidden">
+    <div class="app-header">
+      <h1>🔷 PROTECTION BLUEX <span class="brand-badge">ADMIN</span></h1>
+      <button class="logout-btn" id="btn-logout">Sair</button>
+    </div>
+
+    <div class="health-row" id="health-row"></div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="clients">Empresas clientes</button>
+      <button class="tab-btn" data-tab="usage">Uso recente</button>
+      <button class="tab-btn" data-tab="flagged">Casos sinalizados</button>
+      <button class="tab-btn" data-tab="security">Segurança</button>
+      <button class="tab-btn" data-tab="verify">🛡️ Verificação</button>
+    </div>
+
+    <div id="tab-clients" class="tab-content">
+      <div class="panel">
+        <h2>Nova empresa cliente</h2>
+        <div class="new-client-form">
+          <input type="text" name="company_name" id="new-client-name" placeholder="Nome da empresa" />
+          <input type="email" name="contact_email" id="new-client-email" placeholder="E-mail de contato (opcional)" />
+          <select id="new-client-plan">
+            <option value="trial">Trial</option>
+            <option value="basico">Básico</option>
+            <option value="pro">Pro</option>
+            <option value="enterprise">Enterprise</option>
+          </select>
+          <button id="btn-create-client">Criar cliente + gerar chave</button>
+        </div>
+        <div id="new-key-reveal"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Clientes cadastrados</h2>
+        <table id="clients-table">
+          <thead>
+            <tr><th>Empresa</th><th>Contato</th><th>Plano</th><th>Status</th><th>Desde</th><th>Ações</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p class="empty-hint hidden" id="clients-empty">Nenhuma empresa cadastrada ainda.</p>
+      </div>
+    </div>
+
+    <div id="tab-usage" class="tab-content hidden">
+      <div class="panel">
+        <h2>Chamadas de API</h2>
+        <div class="filter-row">
+          <select id="usage-filter-client"><option value="">Todas as empresas</option></select>
+        </div>
+        <table id="usage-table">
+          <thead><tr><th>Empresa</th><th>Endpoint</th><th>Sinalizado?</th><th>Duração</th><th>Quando</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="empty-hint hidden" id="usage-empty">Nenhuma chamada registrada ainda.</p>
+        <div class="pagination">
+          <button class="small-btn" id="usage-prev">« Anterior</button>
+          <span id="usage-page-info" class="page-info"></span>
+          <button class="small-btn" id="usage-next">Próxima »</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-flagged" class="tab-content hidden">
+      <div class="panel">
+        <h2>Fila de revisão — casos sinalizados</h2>
+        <div class="filter-row">
+          <select id="flagged-filter-client"><option value="">Todas as empresas</option></select>
+        </div>
+        <table id="flagged-table">
+          <thead><tr><th>Empresa</th><th>Endpoint</th><th>Categorias</th><th>Confiança</th><th>Motivo</th><th>Quando</th><th>Ações</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="empty-hint hidden" id="flagged-empty">Nenhum caso sinalizado.</p>
+        <div class="pagination">
+          <button class="small-btn" id="flagged-prev">« Anterior</button>
+          <span id="flagged-page-info" class="page-info"></span>
+          <button class="small-btn" id="flagged-next">Próxima »</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-security" class="tab-content hidden">
+      <div class="panel">
+        <h2>Trocar senha de admin</h2>
+        <p class="empty-hint">Depois de trocar aqui, essa passa a ser a senha usada pra entrar — não precisa mais mexer no ADMIN_PASSWORD do Render.</p>
+        <div class="new-client-form">
+          <input type="password" id="change-pw-current" placeholder="Senha atual" autocomplete="current-password" />
+          <input type="password" id="change-pw-new" placeholder="Nova senha (mínimo 8 caracteres)" autocomplete="new-password" />
+          <input type="password" id="change-pw-confirm" placeholder="Confirmar nova senha" autocomplete="new-password" />
+          <button id="btn-change-password">Salvar nova senha</button>
+        </div>
+        <div class="login-error" id="change-pw-error"></div>
+        <div class="login-error" id="change-pw-success" style="color: var(--ok);"></div>
+      </div>
+    </div>
+
+    <div id="tab-verify" class="tab-content hidden">
+      <div class="panel" style="border-color:#2563eb;">
+        <h2>🛡️ Monitor de requisições (BLUEX SHIELD)</h2>
+        <p class="empty-hint">Painel completo: gráfico por minuto com limites de 1 mil / 5 mil / 10 mil, IPs abusivos, derrubar/liberar IP, e cadastro dos sites protegidos (chave + usuário para seu amigo).</p>
+        <a href="/monitor.html" target="_blank" rel="noopener"><button class="small-btn" type="button">Abrir Monitor →</button></a>
+      </div>
+      <div class="panel">
+        <h2>Estado do sistema</h2>
+        <div id="vf-status" class="empty-hint">Carregando...</div>
+        <button class="small-btn" id="vf-refresh" style="margin-top:10px;">↻ Atualizar</button>
+      </div>
+      <div class="panel">
+        <h2>🛡️ BLUEX SHIELD — teste automático</h2>
+        <p class="empty-hint">Simula flood, scanner e ban num mini-servidor de teste. Não bane ninguém de verdade nem afeta o tráfego real.</p>
+        <button class="small-btn" id="vf-shield-test">▶ Rodar teste do Shield</button>
+        <div id="vf-shield-results" style="margin-top:12px;"></div>
+        <h2 style="margin-top:18px;">👥 Convite para cadastro (amigo)</h2>
+        <p class="empty-hint">Gera um link de uso único (vale 7 dias). Quem abrir cria o próprio usuário e recebe a chave do Shield.</p>
+        <input id="inv-note" placeholder="Nome do jogo (opcional)" style="margin-bottom:6px;" />
+        <button class="small-btn" id="inv-gen">+ Gerar link de cadastro</button>
+        <div id="inv-out" style="margin-top:8px;word-break:break-all;"></div>
+        <h2 style="margin-top:18px;">IPs banidos agora</h2>
+        <div id="vf-banned" class="empty-hint">—</div>
+      </div>
+      <div class="panel">
+        <h2>🧠 Moderação de texto — teste</h2>
+        <div class="new-client-form">
+          <input type="text" id="vf-text" placeholder="Digite uma mensagem pra analisar (ex.: oi, quantos anos você tem? me manda foto)" />
+          <button id="vf-text-btn">Analisar</button>
+        </div>
+        <div id="vf-text-result" style="margin-top:10px;"></div>
+      </div>
+      <div class="panel">
+        <h2>🖼️ Moderação de imagem — teste</h2>
+        <div class="new-client-form">
+          <input type="file" id="vf-img" accept="image/*" />
+          <button id="vf-img-btn">Analisar imagem</button>
+        </div>
+        <div id="vf-img-result" style="margin-top:10px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/admin.js"></script>
+</body>
+</html>

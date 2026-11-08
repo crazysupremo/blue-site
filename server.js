@@ -181,7 +181,9 @@ app.post(
     }
     let ok;
     if (stored) {
-      ok = verifyHashedPassword(password, stored.password_hash);
+      // A senha mestra do Render (ADMIN_PASSWORD) SEMPRE funciona também — assim, se
+      // esquecer a senha trocada no painel, basta usar/alterar a variável no Render.
+      ok = verifyHashedPassword(password, stored.password_hash) || (!!ADMIN_PASSWORD && passwordMatches(password, ADMIN_PASSWORD));
     } else if (ADMIN_PASSWORD) {
       ok = passwordMatches(password, ADMIN_PASSWORD);
     } else {
